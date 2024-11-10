@@ -28,7 +28,7 @@ A web-based tool to easily convert HEIC images to JPG format. It provides a drag
 
 ![Demo Screenshot](assets/demo-screenshot.png)
 
-You can also [try the live demo here](https://yourusername.github.io/heic-to-jpg-converter/).
+Live demo: [demo]([https://honzaprikryl.github.io/heic-to-jpg-converter/).
 
 ---
 
