@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #ffffff, #8db4df, #3498db, #8db4df, #ffffff);
+    background-size: 500% 500%;
+    animation: gradientBackground 10s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #e9ecef, #ffffff, #d1e7ff);
+    background-size: 150% 150%;
+    animation: containerGradient 8s ease infinite;
+}
+
+@keyframes containerGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.file-drop-area {
+    margin: 20px 0;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: default;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.file-drop-area p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.file-drop-area input[type="file"] {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.file-drop-area:hover {
+    background-color: #e9ecef;
+    border-color: #0056b3;
+}
+
+.file-drop-area.drag-over {
+    background-color: #d1e7ff;
+    border-color: #0056b3;
+}
+
+.file-input-container {
+    display: inline-block;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.file-input-container:hover {
+    border-color: #0056b3;
+    background-color: #e9ecef;
+}
+
+.file-upload-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#selectedFilesText {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+input[type="file"] {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #007bff;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #0056b3;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.progress-bar-container {
+    width: 90%;
+    height: 20px;
+    background-color: #f0f0f0;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #3498db;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+#progressText {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-link:hover {
+    background-color: #218838;
+}
+
+.download-link:active {
+    background-color: #1e7e34;
+}

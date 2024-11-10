@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEIC to JPG Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/heic2any/dist/heic2any.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HEIC to JPG Converter</h1>
+        <p>Select your HEIC files below and click "Convert".</p>
+        <div class="file-upload-container">
+            <button id="chooseFilesButton">Choose Files</button>
+            <input type="file" id="fileInput" style="display: none;" multiple accept=".heic">
+            <span id="selectedFilesText">No files selected</span>
+            <div class="file-drop-area" id="fileDropArea">
+                <p>Drag and drop your HEIC files here</p>
+            </div>
+        </div>
+        <button id="convertButton">Convert to JPG</button>
+        <div id="output"></div>
+        <div class="progress-bar-container" style="display: none;">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p id="progressText"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
