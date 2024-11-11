@@ -42,4 +42,4 @@ A web-based tool to easily convert HEIC images to JPG format. It provides a drag
 
 ### Clone Repository
 ```bash
-git clone https://github.com/yourusername/heic-to-jpg-converter.git
+git clone https://github.com/HonzaPrikryl/heic-to-jpg-converter.git
