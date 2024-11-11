@@ -67,14 +67,16 @@ document.getElementById('convertButton').addEventListener('click', async () => {
     for (let i = 0; i < totalFiles; i++) {
         const file = files[i];
 
-        if (file.name.toLowerCase().endsWith(".heic")) {
+        const isHEIC = file.type.toLowerCase() === "image/heic" || file.name.trim().toLowerCase().endsWith(".heic");
+
+        if (isHEIC) {
             try {
                 const blob = await heic2any({
                     blob: file,
                     toType: "image/jpeg"
                 });
 
-                const fileName = file.name.replace('.heic', '.jpg');
+                const fileName = file.name.replace(/\.heic$/i, '.jpg');
                 zip.file(fileName, blob);
                 conversionCount++;
             } catch (error) {
@@ -84,6 +86,11 @@ document.getElementById('convertButton').addEventListener('click', async () => {
                 errorMsg.style.color = "red";
                 outputDiv.appendChild(errorMsg);
             }
+        } else {
+            const warningMsg = document.createElement('p');
+            warningMsg.textContent = `${file.name} is not a valid HEIC file. Skipping.`;
+            warningMsg.style.color = "orange";
+            outputDiv.appendChild(warningMsg);
         }
 
         const progress = Math.round(((i + 1) / totalFiles) * 100);
