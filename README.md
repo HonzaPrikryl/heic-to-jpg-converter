@@ -40,13 +40,6 @@ A web-based tool to easily convert HEIC images to JPG format. It provides a drag
 
 ---
 
-## Development
-
-### Prerequisites
-
-- **Git**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- **Node.js (optional)**: [Install Node.js](https://nodejs.org/)
-
 ### Clone Repository
 ```bash
 git clone https://github.com/yourusername/heic-to-jpg-converter.git
